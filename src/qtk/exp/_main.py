@@ -7,7 +7,7 @@ from typing import Any
 
 import comet_ml as comet
 
-import qtk.exp
+import qtk
 import qtk.typing as tp
 
 

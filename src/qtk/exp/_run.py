@@ -12,7 +12,7 @@ def run(
     *,
     exp_name: str | None = None,
     log_level: int | str = logging.NOTSET,
-    log_file: tp.StrPath | None = "experiment.log",
+    log_file: tp.StrPath | None = "exp.log",
     tags: list[str] | None = None,
     parameters: dict[str, Any] | None = None,
 ) -> Callable[[Callable[[], _T]], Callable[[], _T]]:
