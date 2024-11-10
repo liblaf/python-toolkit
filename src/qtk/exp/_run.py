@@ -6,7 +6,7 @@ import qtk
 import qtk.typing as tp
 
 _T = TypeVar("_T")
-_C = TypeVar("_C", bound=qtk.BaseParams)
+_C = TypeVar("_C", bound=qtk.BaseConfig)
 
 
 def run(

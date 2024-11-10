@@ -1,6 +1,6 @@
 from . import array_types, env, exp, iter, logging, serialize, text, typing
 from .array_types import is_array_like, is_jax, is_numpy, is_torch
-from .exp import BaseParams, Experiment, get_running_experiment, run, start
+from .exp import BaseConfig, Experiment, get_running_experiment, run, start
 from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
     Timer,
@@ -18,7 +18,7 @@ from .serialize import load_pydantic, save_pydantic
 from .text import strip_comments
 
 __all__ = [
-    "BaseParams",
+    "BaseConfig",
     "Experiment",
     "Timer",
     "array_types",
