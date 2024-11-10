@@ -1,5 +1,4 @@
 import datetime
-import os
 import shutil
 import unittest.mock
 from pathlib import Path
@@ -67,7 +66,7 @@ class Experiment:
 def start(*, name: str | None = None, tags: list[str] | None = None) -> Experiment:
     exp: comet.BaseExperiment = comet.start(
         experiment_config=comet.ExperimentConfig(
-            name=name or os.getenv("EXP_NAME") or default_name(), tags=tags
+            name=name or qtk.env.get_str("EXP_NAME") or default_name(), tags=tags
         )
     )
     return Experiment(exp)
