@@ -8,6 +8,7 @@ from ._bool import (
     BLike,
     BMNLike,
     BN3Like,
+    BN4Like,
     BNLike,
     BNNLike,
 )
@@ -20,6 +21,7 @@ from ._float import (
     FLike,
     FMNLike,
     FN3Like,
+    FN4Like,
     FNLike,
     FNNLike,
 )
@@ -31,6 +33,7 @@ from ._integer import (
     ILike,
     IMNLike,
     IN3Like,
+    IN4Like,
     INLike,
     INNLike,
 )
@@ -46,6 +49,7 @@ __all__ = [
     "BLike",
     "BMNLike",
     "BN3Like",
+    "BN4Like",
     "BNLike",
     "BNNLike",
     "Bool",
@@ -56,6 +60,7 @@ __all__ = [
     "FLike",
     "FMNLike",
     "FN3Like",
+    "FN4Like",
     "FNLike",
     "FNNLike",
     "Float",
@@ -66,6 +71,7 @@ __all__ = [
     "ILike",
     "IMNLike",
     "IN3Like",
+    "IN4Like",
     "INLike",
     "INNLike",
     "Integer",

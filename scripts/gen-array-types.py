@@ -23,6 +23,7 @@ SHAPES: list[str] = [
     "4 4",
     "M N",
     "N 3",
+    "N 4",
     "N N",
 ]
 
