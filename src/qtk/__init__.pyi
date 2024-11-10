@@ -1,4 +1,5 @@
 from . import array_types, env, exp, iter, logging, serialize, text, typing
+from .array_types import is_array_like, is_jax, is_numpy, is_torch
 from .exp import Experiment, get_running_experiment, run, start
 from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
@@ -28,7 +29,11 @@ __all__ = [
     "flatten",
     "get_running_experiment",
     "info_once",
+    "is_array_like",
+    "is_jax",
+    "is_numpy",
     "is_subsequence",
+    "is_torch",
     "iter",
     "load_pydantic",
     "log_once",

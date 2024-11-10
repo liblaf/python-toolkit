@@ -1,4 +1,4 @@
-from ._utils import is_numpy
+from ._utils import as_numpy, is_numpy
 from ._export import (
     ArrayLike,
     Bool,
@@ -40,6 +40,7 @@ __all__ = [
     "Integer",
     "NDArray",
     "Shaped",
+    "as_numpy",
     "is_array_like",
     "is_numpy",
 {%- for s in shapes %}

@@ -69,7 +69,7 @@ from ._integer import (
     INN,
     I,
 )
-from ._utils import is_numpy
+from ._utils import as_numpy, is_numpy
 
 __all__ = [
     "B33",
@@ -132,6 +132,7 @@ __all__ = [
     "Integer",
     "NDArray",
     "Shaped",
+    "as_numpy",
     "is_array_like",
     "is_numpy",
 ]
