@@ -8,9 +8,10 @@ from ._name import (
     is_named,
     is_named_partial,
 )
-from ._types import Scalar, StrPath
+from ._types import ArrayLike, Scalar, StrPath
 
 __all__ = [
+    "ArrayLike",
     "Scalar",
     "StrPath",
     "full_name",

@@ -1,4 +1,4 @@
-from . import iter, logging, serialize, text, typing
+from . import array_types, iter, logging, serialize, text, typing
 from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
     Timer,
@@ -17,6 +17,7 @@ from .text import strip_comments
 
 __all__ = [
     "Timer",
+    "array_types",
     "critical_once",
     "debug_once",
     "error_once",
