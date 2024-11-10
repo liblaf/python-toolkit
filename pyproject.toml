@@ -10,6 +10,7 @@ authors = [
   { email = "30631553+liblaf@users.noreply.github.com", name = "liblaf" },
 ]
 dependencies = [
+  "gitpython>=3.1.43",
   "jaxtyping>=0.2.34",
   "lazy-loader>=0.4",
   "loguru>=0.7.2",

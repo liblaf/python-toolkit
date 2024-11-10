@@ -18,7 +18,7 @@ def run(
 ) -> Callable[[Callable[[], _T]], Callable[[], _T]]:
     def decorator(fn: Callable[[], _T]) -> Callable[[], _T]:
         def wrapped() -> _T:
-            exp: qtk.exp.Experiment = qtk.exp.start(name=exp_name, tags=tags)
+            exp: qtk.Experiment = qtk.start(name=exp_name, tags=tags)
             if parameters is not None:
                 exp.log_parameters(parameters)
             qtk.logging.init(level=log_level, fpath=log_file)
