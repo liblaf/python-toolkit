@@ -38,7 +38,7 @@ def auto_commit(exp_name: str | None = None, exp_key: str | None = None) -> None
     repo: git.Repo = git.Repo(search_parent_directories=True)
     if not repo.is_dirty():
         return
-    repo.git.add(update=True)
+    repo.git.add(all=True)
     message: str = "chore(exp): auto commit\n\n"
     if exp_name:
         message += f"name : {exp_name}\n"
