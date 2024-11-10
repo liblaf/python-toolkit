@@ -1,7 +1,7 @@
 from collections.abc import Iterable, Sequence
 from typing import Any, TypeVar
 
-import qtk.typing as qt
+import qtk.typing as tp
 
 _T = TypeVar("_T")
 
@@ -10,12 +10,12 @@ def flatten(
     iterable: _T | Iterable[_T] | Iterable[Iterable[_T]] | Iterable,
     base_type: tuple[type, ...] = (str, bytes),
 ) -> Iterable[_T]:
-    if not qt.is_iterable(iterable, base_type):
+    if not tp.is_iterable(iterable, base_type):
         yield iterable  # pyright: ignore [reportReturnType]
         return
 
     for item in iterable:
-        if qt.is_iterable(item, base_type):
+        if tp.is_iterable(item, base_type):
             yield from flatten(item)
         else:
             yield item

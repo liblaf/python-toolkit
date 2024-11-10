@@ -1,4 +1,4 @@
-from . import array_types, iter, logging, serialize, text, typing
+from . import array_types, env, exp, iter, logging, serialize, text, typing
 from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
     Timer,
@@ -20,7 +20,9 @@ __all__ = [
     "array_types",
     "critical_once",
     "debug_once",
+    "env",
     "error_once",
+    "exp",
     "flatten",
     "info_once",
     "is_subsequence",

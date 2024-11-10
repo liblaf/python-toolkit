@@ -10,4 +10,4 @@ extend-ignore = ["E741"]
 "qtk.array_types.jax" = "tj"
 "qtk.array_types.numpy" = "tn"
 "qtk.array_types.torch" = "tt"
-"qtk.typing" = "ty"
+"qtk.typing" = "tp"

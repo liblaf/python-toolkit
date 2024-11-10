@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Any
 
 import qtk
-import qtk.typing as qt
+import qtk.typing as tp
 
 _READERS: dict[str, Callable[..., Any]] = {
     ".json": qtk.serialize.load_json,
@@ -19,7 +19,7 @@ _WRITERS: dict[str, Callable[..., None]] = {
 }
 
 
-def load(fpath: qt.StrPath, *, ext: str | None = None) -> Any:
+def load(fpath: tp.StrPath, *, ext: str | None = None) -> Any:
     fpath: Path = Path(fpath)
     if ext is None:
         ext = fpath.suffix
@@ -30,7 +30,7 @@ def load(fpath: qt.StrPath, *, ext: str | None = None) -> Any:
     return reader(fpath)
 
 
-def save(fpath: qt.StrPath, data: Any, *, ext: str | None = None) -> None:
+def save(fpath: tp.StrPath, data: Any, *, ext: str | None = None) -> None:
     fpath: Path = Path(fpath)
     if ext is None:
         ext = fpath.suffix
