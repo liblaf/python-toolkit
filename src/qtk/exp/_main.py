@@ -36,6 +36,9 @@ class Experiment:
     def log_parameter(self, name: str, value: Any) -> None:
         self._exp.log_parameter(name, value)
 
+    def log_parameters(self, parameters: dict[str, Any]) -> None:
+        self._exp.log_parameters(parameters)
+
     def log_asset(self, path: tp.StrPath, name: str | None = None) -> None:
         path: Path = Path(path)
         if qtk.env.get_bool("EXP_LOG_ASSET_TO_COMET", default=False):
@@ -61,10 +64,10 @@ class Experiment:
         )
 
 
-def start(*, exp_name: str | None = None, tags: list[str] | None = None) -> Experiment:
+def start(*, name: str | None = None, tags: list[str] | None = None) -> Experiment:
     exp: comet.BaseExperiment = comet.start(
         experiment_config=comet.ExperimentConfig(
-            name=exp_name or os.getenv("EXP_NAME") or default_name(), tags=tags
+            name=name or os.getenv("EXP_NAME") or default_name(), tags=tags
         )
     )
     return Experiment(exp)
