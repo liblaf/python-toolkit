@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.0.1](https://github.com/liblaf/python-toolkit/compare/v0.0.0...v0.0.1) (2024-11-11)
+
+
+### ✨ Features
+
+* add logging functionality for additional experiment data ([b0ea8fb](https://github.com/liblaf/python-toolkit/commit/b0ea8fb1e4845e9f198d365c5226fd0777ebfcd2))
+
+
+### ♻ Code Refactoring
+
+* **exp:** reorganize experiment module for clarity and maintainability ([24373c0](https://github.com/liblaf/python-toolkit/commit/24373c03cefa8743d9e52f2e6389bff18238879d))
+
+
+### 🔧 Continuous Integration
+
+* enable write permissions for GitHub Actions OIDC tokens ([0d5a367](https://github.com/liblaf/python-toolkit/commit/0d5a3671b291f9de61f1c2bbdb5807d518681964))
+
 ## 0.0.0 (2024-11-11)
 
 
