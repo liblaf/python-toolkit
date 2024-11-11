@@ -9,8 +9,8 @@ def merge_mapping(origin: Mapping, update: Mapping) -> dict:
     """
     original: dict = dict(origin)
     for key, value in update.items():
-        if isinstance(value, dict) and key in original:
-            if not isinstance(original[key], dict):
+        if isinstance(value, Mapping) and key in original:
+            if not isinstance(original[key], Mapping):
                 msg: str = (
                     "Config variables contradict each other: "
                     f"Key {key:!r} is both a value and a nested dict."

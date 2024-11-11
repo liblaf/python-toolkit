@@ -36,7 +36,7 @@ class Timer:
         if self.name is None:
             self.name = fn.__name__ + "()"
         if self.depth is None:
-            self.depth = 2
+            self.depth = 3
 
         @functools.wraps(fn)
         def wrapped(*args: _P.args, **kwargs: _P.kwargs) -> _T:
@@ -66,7 +66,7 @@ class Timer:
 
     def stop(self) -> None:
         self._end = time.perf_counter()
-        logger.opt(depth=self.depth or 1).log(
+        logger.opt(depth=self.depth or 2).log(
             self.level, "{} executed in {} sec.", self.name or "Block", self.elapsed
         )
 

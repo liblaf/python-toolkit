@@ -1,6 +1,7 @@
 import datetime
 import shutil
 import unittest.mock
+from collections.abc import Mapping
 from pathlib import Path
 from typing import Any
 
@@ -61,6 +62,12 @@ class Experiment:
             qtk.env.get_str("EXP_PROJECT_DIR")
             or Path.home() / "exp" / self.project_name
         )
+
+    def log_other(self, key: Any, value: Any) -> None:
+        self._exp.log_other(key, value)
+
+    def log_others(self, dictionary: Mapping[str, Any]) -> None:
+        self._exp.log_others(dictionary)
 
 
 def get_running_experiment() -> Experiment:
