@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.2](https://github.com/liblaf/python-toolkit/compare/v0.0.1...v0.0.2) (2024-11-11)
+
+
+### 👷 Build System
+
+* configure Pyright for dependency installation and linting ([70bc996](https://github.com/liblaf/python-toolkit/commit/70bc996c89a09f0eeb27a27a0ce09e5cd7ca139f))
+
+
+### 🔧 Continuous Integration
+
+* add concurrency control to CI workflows ([0e6cb92](https://github.com/liblaf/python-toolkit/commit/0e6cb92a65c821e699633e410f94a8953d66d19b))
+* streamline CI workflow for main branch ([16a61a3](https://github.com/liblaf/python-toolkit/commit/16a61a390fba3f2b8c2717f096f3aa332cde9b4c))
+
 ## [0.0.1](https://github.com/liblaf/python-toolkit/compare/v0.0.0...v0.0.1) (2024-11-11)
 
 
