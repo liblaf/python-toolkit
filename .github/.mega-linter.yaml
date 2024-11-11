@@ -3,3 +3,5 @@
 
 EXTENDS:
   - https://github.com/liblaf/.github/raw/refs/heads/main/.mega-linter.yaml
+
+PYTHON_RUFF_CONFIG_FILE: LINTER_DEFAULT
