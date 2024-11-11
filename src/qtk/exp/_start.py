@@ -45,7 +45,7 @@ def auto_commit(exp_name: str | None = None, exp_key: str | None = None) -> None
     if url := get_url(exp_key):
         message += f"url  : {url}\n"
     message = message.strip()
-    repo.index.commit(message)
+    repo.git.commit(message=message)
 
 
 def start(*, name: str | None = None, tags: list[str] | None = None) -> qtk.Experiment:

@@ -1,1 +1,1 @@
-# liblaf's Python Toolkit
+# Python Toolkit

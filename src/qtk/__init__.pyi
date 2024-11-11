@@ -1,6 +1,6 @@
 from . import array_types, env, exp, iter, logging, serialize, text, typing
 from .array_types import is_array_like, is_jax, is_numpy, is_torch
-from .exp import BaseConfig, Experiment, get_running_experiment, run, start
+from .exp import BaseConfig, Experiment, get_running_experiment, main, start
 from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
     Timer,
@@ -40,7 +40,7 @@ __all__ = [
     "log_once",
     "logging",
     "merge_mapping",
-    "run",
+    "main",
     "save_pydantic",
     "serialize",
     "start",
