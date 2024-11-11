@@ -42,7 +42,7 @@ mpmath==1.3.0
 narwhals==1.13.3
 networkx==3.4.2
 numpy==2.1.3
-nvidia-cublas-cu12==12.4.5.8 ; platform_machine == 'x86_64' and platform_system == 'Linux'
+nvidia-cublas-cu12==12.6.3.3 ; platform_machine == 'x86_64' and platform_system == 'Linux'
 nvidia-cuda-cupti-cu12==12.4.127 ; platform_machine == 'x86_64' and platform_system == 'Linux'
 nvidia-cuda-nvrtc-cu12==12.4.127 ; platform_machine == 'x86_64' and platform_system == 'Linux'
 nvidia-cuda-runtime-cu12==12.4.127 ; platform_machine == 'x86_64' and platform_system == 'Linux'
