@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/liblaf/python-toolkit/compare/v0.0.2...v0.0.3) (2024-11-11)
+
+
+### 🐛 Bug Fixes
+
+* update .gitignore to include env file ([2feec03](https://github.com/liblaf/python-toolkit/commit/2feec03a36ec2b52b7f1923c27fc8c75616c5c46))
+
 ## [0.0.2](https://github.com/liblaf/python-toolkit/compare/v0.0.1...v0.0.2) (2024-11-11)
 
 
