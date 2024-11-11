@@ -19,6 +19,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup uv
         uses: astral-sh/setup-uv@v3
+      - # TODO: `uv.lock` use a PyPI mirror, which is not available for CI
+        name: Remove uv.lock
+        run: rm --force --verbose uv.lock
       - name: Install Dependencies
         run: uv sync --all-extras
       - name: Build
