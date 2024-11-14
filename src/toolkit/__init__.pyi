@@ -2,16 +2,15 @@ from . import (
     array,
     environ,
     exp,
-    iter,
     logging,
     serialize,
-    text,
     typing,
     validation,
 )
+from ._iter import flatten, is_subsequence, merge_mapping
+from ._text import strip_comments
 from .array import as_dict_of_numpy, as_numpy, is_array_like, is_jax, is_numpy, is_torch
 from .exp import BaseConfig, Experiment, get_running_experiment, main, start
-from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
     Timer,
     critical_once,
@@ -25,7 +24,6 @@ from .logging import (
     warning_once,
 )
 from .serialize import load_pydantic, save_pydantic
-from .text import strip_comments
 
 __all__ = [
     "BaseConfig",
@@ -47,7 +45,6 @@ __all__ = [
     "is_numpy",
     "is_subsequence",
     "is_torch",
-    "iter",
     "load_pydantic",
     "log_once",
     "logging",
@@ -58,7 +55,6 @@ __all__ = [
     "start",
     "strip_comments",
     "success_once",
-    "text",
     "timer",
     "trace_once",
     "typing",

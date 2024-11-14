@@ -1,4 +1,4 @@
-from ._utils import as_dict_of_numpy, as_numpy, is_numpy
+from ._utils import as_dict_of_numpy, as_dtype, as_numpy, is_numpy, scale
 from ._export import (
     ArrayLike,
     Bool,
@@ -41,9 +41,11 @@ __all__ = [
     "NDArray",
     "Shaped",
     "as_dict_of_numpy",
+    "as_dtype",
     "as_numpy",
     "is_array_like",
     "is_numpy",
+    "scale",
 {%- for s in shapes %}
     "B{{ s.replace(" ", "") }}",
 {%- endfor %}

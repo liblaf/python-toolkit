@@ -1,16 +1,12 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Any, TypeGuard
+from typing import Any
 
 import numpy as np
 
 import toolkit as tk
 import toolkit.typing as tp
-
-
-def is_numpy(obj: Any) -> TypeGuard[np.ndarray]:
-    return tp.is_instance_named_partial(obj, "numpy.ndarray")
 
 
 def as_numpy(obj: Any) -> np.ndarray:
@@ -21,5 +17,7 @@ def as_numpy(obj: Any) -> np.ndarray:
     return np.asarray(obj)
 
 
-def as_dict_of_numpy(obj: Mapping[str, tp.ArrayLike]) -> dict[str, np.ndarray]:
+def as_dict_of_numpy(obj: Mapping[str, tp.ArrayLike] | None) -> dict[str, np.ndarray]:
+    if obj is None:
+        return {}
     return {k: tk.as_numpy(v) for k, v in obj.items()}

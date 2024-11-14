@@ -75,7 +75,7 @@ from ._integer import (
     INN,
     I,
 )
-from ._utils import as_dict_of_numpy, as_numpy, is_numpy
+from ._utils import as_dict_of_numpy, as_dtype, as_numpy, is_numpy, scale
 
 __all__ = [
     "B33",
@@ -145,7 +145,9 @@ __all__ = [
     "NDArray",
     "Shaped",
     "as_dict_of_numpy",
+    "as_dtype",
     "as_numpy",
     "is_array_like",
     "is_numpy",
+    "scale",
 ]
