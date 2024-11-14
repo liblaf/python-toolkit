@@ -1,15 +1,15 @@
 from . import (
-    array_types,
+    array,
     environ,
     exp,
     iter,
     logging,
-    pydantic,
     serialize,
     text,
     typing,
+    validation,
 )
-from .array_types import is_array_like, is_jax, is_numpy, is_torch
+from .array import as_dict_of_numpy, as_numpy, is_array_like, is_jax, is_numpy, is_torch
 from .exp import BaseConfig, Experiment, get_running_experiment, main, start
 from .iter import flatten, is_subsequence, merge_mapping
 from .logging import (
@@ -31,7 +31,9 @@ __all__ = [
     "BaseConfig",
     "Experiment",
     "Timer",
-    "array_types",
+    "array",
+    "as_dict_of_numpy",
+    "as_numpy",
     "critical_once",
     "debug_once",
     "environ",
@@ -51,7 +53,6 @@ __all__ = [
     "logging",
     "main",
     "merge_mapping",
-    "pydantic",
     "save_pydantic",
     "serialize",
     "start",
@@ -61,5 +62,6 @@ __all__ = [
     "timer",
     "trace_once",
     "typing",
+    "validation",
     "warning_once",
 ]

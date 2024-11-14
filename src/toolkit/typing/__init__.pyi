@@ -1,5 +1,5 @@
-from . import pydantic
 from ._export import (
+    ArrayLike,
     is_array_like,
     is_jax,
     is_numpy,
@@ -15,16 +15,10 @@ from ._name import (
     is_named,
     is_named_partial,
 )
-from ._types import ArrayLike, Scalar, StrPath
-from .pydantic import AsJax, AsNumpy, AsTorch, SaveDirPath, SaveFilePath
+from ._types import Scalar, StrPath
 
 __all__ = [
     "ArrayLike",
-    "AsJax",
-    "AsNumpy",
-    "AsTorch",
-    "SaveDirPath",
-    "SaveFilePath",
     "Scalar",
     "StrPath",
     "full_name",
@@ -40,5 +34,4 @@ __all__ = [
     "is_numpy",
     "is_sequence",
     "is_torch",
-    "pydantic",
 ]

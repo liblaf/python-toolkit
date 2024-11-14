@@ -1,7 +1,0 @@
-from jaxtyping import Bool
-
-from qtk.array_types import ArrayLike
-
-{% for s in shapes -%}
-B{{ s.replace(" ", "") }}Like = Bool[ArrayLike, "{{ s }}"]
-{% endfor %}

@@ -559,7 +559,7 @@ wheels = [
 
 [[package]]
 name = "liblaf-toolkit"
-version = "0.0.4"
+version = "0.0.5"
 source = { editable = "." }
 dependencies = [
     { name = "gitpython" },
