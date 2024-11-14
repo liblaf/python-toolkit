@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.7](https://github.com/liblaf/python-toolkit/compare/v0.0.6...v0.0.7) (2024-11-14)
+
+
+### ♻ Code Refactoring
+
+* reorganize toolkit modules for better modularity ([5809983](https://github.com/liblaf/python-toolkit/commit/5809983ee4b21dec1141ef5b5c568e48199c5e0e))
+
+
+### 👷 Build System
+
+* update dependency installation command in CI configuration ([cd10c17](https://github.com/liblaf/python-toolkit/commit/cd10c1722e3dae97ad3201c2c6eb25574bd7e8ce))
+
 ## [0.0.6](https://github.com/liblaf/python-toolkit/compare/v0.0.5...v0.0.6) (2024-11-14)
 
 
