@@ -4,7 +4,7 @@ set -o nounset
 set -o pipefail
 
 git_root=$(git rev-parse --show-toplevel)
-src_dir=$git_root/src/qtk
+src_dir=$git_root/src/toolkit
 
 readarray -t dpaths < <(find "$src_dir" -type d)
 for dpath in "${dpaths[@]}"; do

@@ -1,4 +1,14 @@
-from . import array_types, environ, exp, iter, logging, serialize, text, typing
+from . import (
+    array_types,
+    environ,
+    exp,
+    iter,
+    logging,
+    pydantic,
+    serialize,
+    text,
+    typing,
+)
 from .array_types import is_array_like, is_jax, is_numpy, is_torch
 from .exp import BaseConfig, Experiment, get_running_experiment, main, start
 from .iter import flatten, is_subsequence, merge_mapping
@@ -41,6 +51,7 @@ __all__ = [
     "logging",
     "main",
     "merge_mapping",
+    "pydantic",
     "save_pydantic",
     "serialize",
     "start",
