@@ -14,7 +14,7 @@ build:
     post_checkout:
       - git fetch --unshallow || true
     pre_install:
-      - pipx install uv
+      - pip install uv
       - uv export --all-extras --no-hashes --output-file requirements.txt
 
 mkdocs:
