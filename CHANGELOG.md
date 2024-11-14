@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.4](https://github.com/liblaf/python-toolkit/compare/v0.0.3...v0.0.4) (2024-11-14)
+
+
+### ♻ Code Refactoring
+
+* rename module and update references ([06e8f88](https://github.com/liblaf/python-toolkit/commit/06e8f886445c5cbb893df8986c99487379d8a2cb))
+* streamline environment variable handling and module imports ([5bc61f1](https://github.com/liblaf/python-toolkit/commit/5bc61f1883a4f0ebf2628d0470b5f19457377cfa))
+
 ## [0.0.3](https://github.com/liblaf/python-toolkit/compare/v0.0.2...v0.0.3) (2024-11-11)
 
 
