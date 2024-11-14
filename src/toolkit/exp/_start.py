@@ -4,13 +4,13 @@ import secrets
 import comet_ml as comet
 import git
 
-import toolkit
+import toolkit as tk
 
 
 def get_name(name: str | None = None) -> str:
     if name:
         return name
-    if name := toolkit.env.get_str("EXP_NAME"):
+    if name := tk.environ.get_str("EXP_NAME"):
         return name
     now: datetime.datetime = datetime.datetime.now()  # noqa: DTZ005
     return now.strftime("%Y-%m-%dT%H%M%S.%f")
@@ -19,7 +19,7 @@ def get_name(name: str | None = None) -> str:
 def get_key(key: str | None = None) -> str:
     if key:
         return key
-    if key := toolkit.env.get_str("EXP_KEY"):
+    if key := tk.environ.get_str("EXP_KEY"):
         return key
     return secrets.token_hex(16)
 
@@ -27,8 +27,8 @@ def get_key(key: str | None = None) -> str:
 def get_url(key: str | None = None) -> str | None:
     if not key:
         return None
-    if (workspace := toolkit.env.get_str("COMET_WORKSPACE")) and (
-        project_name := toolkit.env.get_str("COMET_PROJECT_NAME")
+    if (workspace := tk.environ.get_str("COMET_WORKSPACE")) and (
+        project_name := tk.environ.get_str("COMET_PROJECT_NAME")
     ):
         return f"https://www.comet.com/{workspace}/{project_name}/{key}"
     return None
@@ -48,13 +48,13 @@ def auto_commit(exp_name: str | None = None, exp_key: str | None = None) -> None
     repo.git.commit(message=message)
 
 
-def start(*, name: str | None = None, tags: list[str] | None = None) -> toolkit.Experiment:
+def start(*, name: str | None = None, tags: list[str] | None = None) -> tk.Experiment:
     exp_key: str = get_key()
     exp_name: str = get_name(name)
-    if toolkit.env.get_bool("EXP_AUTO_COMMIT", default=True):
+    if tk.environ.get_bool("EXP_AUTO_COMMIT", default=True):
         auto_commit(exp_name, exp_key)
     exp: comet.BaseExperiment = comet.start(
         experiment_key=exp_key,
         experiment_config=comet.ExperimentConfig(name=exp_name, tags=tags),
     )
-    return toolkit.Experiment(exp)
+    return tk.Experiment(exp)

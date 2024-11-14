@@ -1,4 +1,4 @@
-from . import array_types, env, exp, iter, logging, serialize, text, typing
+from . import array_types, environ, exp, iter, logging, serialize, text, typing
 from .array_types import is_array_like, is_jax, is_numpy, is_torch
 from .exp import BaseConfig, Experiment, get_running_experiment, main, start
 from .iter import flatten, is_subsequence, merge_mapping
@@ -24,7 +24,7 @@ __all__ = [
     "array_types",
     "critical_once",
     "debug_once",
-    "env",
+    "environ",
     "error_once",
     "exp",
     "flatten",

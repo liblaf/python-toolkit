@@ -6,11 +6,11 @@ from typing import Any, TypeVar, get_type_hints
 
 import git
 
-import toolkit
+import toolkit as tk
 import toolkit.typing as tp
 
 _T = TypeVar("_T")
-_C = TypeVar("_C", bound=toolkit.BaseConfig)
+_C = TypeVar("_C", bound=tk.BaseConfig)
 
 
 def main(
@@ -23,8 +23,8 @@ def main(
 ) -> Callable[[Callable[[_C], _T]], Callable[[_C], _T]]:
     def decorator(fn: Callable[[_C], _T]) -> Callable[[_C], _T]:
         def wrapped(cfg: _C) -> _T:
-            toolkit.logging.init(level=log_level, fpath=log_file)
-            exp: toolkit.Experiment = toolkit.start(name=exp_name, tags=tags)
+            tk.logging.init(level=log_level, fpath=log_file)
+            exp: tk.Experiment = tk.start(name=exp_name, tags=tags)
             exp.log_parameters(cfg.model_dump())
             exp.log_other("entrypoint", _path_relative_to_git_root())
             result: _T = fn(cfg)

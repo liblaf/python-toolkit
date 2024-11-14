@@ -7,7 +7,7 @@ from typing import Any
 
 import comet_ml as comet
 
-import toolkit
+import toolkit as tk
 import toolkit.typing as tp
 
 
@@ -41,7 +41,7 @@ class Experiment:
 
     def log_asset(self, path: tp.StrPath, name: str | None = None) -> None:
         path: Path = Path(path)
-        if toolkit.env.get_bool("EXP_LOG_ASSET_TO_COMET", default=False):
+        if tk.environ.get_bool("EXP_LOG_ASSET_TO_COMET", default=False):
             self._exp.log_asset(path, name)
         if name is None:
             try:
@@ -59,7 +59,7 @@ class Experiment:
     @property
     def project_dir(self) -> Path:
         return Path(
-            toolkit.env.get_str("EXP_PROJECT_DIR")
+            tk.environ.get_str("EXP_PROJECT_DIR")
             or Path.home() / "exp" / self.project_name
         )
 

@@ -2,20 +2,20 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-import toolkit
+import toolkit as tk
 import toolkit.typing as tp
 
 _READERS: dict[str, Callable[..., Any]] = {
-    ".json": toolkit.serialize.load_json,
-    ".toml": toolkit.serialize.load_toml,
-    ".yaml": toolkit.serialize.load_yaml,
+    ".json": tk.serialize.load_json,
+    ".toml": tk.serialize.load_toml,
+    ".yaml": tk.serialize.load_yaml,
 }
 
 
 _WRITERS: dict[str, Callable[..., None]] = {
-    ".json": toolkit.serialize.save_json,
-    ".toml": toolkit.serialize.save_toml,
-    ".yaml": toolkit.serialize.save_yaml,
+    ".json": tk.serialize.save_json,
+    ".toml": tk.serialize.save_toml,
+    ".yaml": tk.serialize.save_yaml,
 }
 
 
