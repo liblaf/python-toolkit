@@ -8,14 +8,14 @@ python:
 build:
   os: ubuntu-lts-latest
   tools:
-    python: "3.12"
+    python: latest
   jobs:
     # ref: <https://docs.readthedocs.io/en/stable/build-customization.html#unshallow-git-clone>
     post_checkout:
       - git fetch --unshallow || true
     pre_install:
-      - pip install uv
-      - uv export --all-extras --group docs --no-hashes --output-file requirements.txt
+      - pipx install uv
+      - uv export --all-extras --no-hashes --output-file requirements.txt
 
 mkdocs:
   configuration: mkdocs.yaml

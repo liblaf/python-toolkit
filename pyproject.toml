@@ -62,5 +62,6 @@ packages = ["src/toolkit"]
 allow-direct-references = true
 
 [tool.uv]
+default-groups = ["dev", "docs"]
 managed = true
 package = true
