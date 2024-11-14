@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.0.5](https://github.com/liblaf/python-toolkit/compare/v0.0.4...v0.0.5) (2024-11-14)
+
+
+### 📝 Documentation
+
+* establish documentation infrastructure and initial setup ([7340211](https://github.com/liblaf/python-toolkit/commit/73402118e80a514f4748e0622157a23597b78385))
+
+
+### ♻ Code Refactoring
+
+* reorganize imports and add new modules for enhanced type handling ([3301191](https://github.com/liblaf/python-toolkit/commit/330119116362406bb125ed6ef3ea702b48d14274))
+
+
+### 👷 Build System
+
+* update dependency management and build configurations ([a8856e9](https://github.com/liblaf/python-toolkit/commit/a8856e97448cebb9a9c0425d113231575ac1d754))
+
 ## [0.0.4](https://github.com/liblaf/python-toolkit/compare/v0.0.3...v0.0.4) (2024-11-14)
 
 
