@@ -3,4 +3,4 @@ extend = ".github/linters/.ruff.toml"
 target-version = "py311"
 
 [lint]
-# extend-ignore = ["E741"]
+extend-ignore = ["E741"]

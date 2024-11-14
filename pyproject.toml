@@ -43,13 +43,11 @@ torch = ["torch>=2.5.1"]
 "Source Code" = "https://github.com/liblaf/python-toolkit"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/qtk"]
+packages = ["src/toolkit"]
 
 [tool.hatch.metadata]
 allow-direct-references = true
 
 [tool.uv]
-index-url = "https://pypi.org/simple"
-
-[tool.uv.pip]
-index-url = "https://pypi.org/simple"
+managed = true
+package = true
