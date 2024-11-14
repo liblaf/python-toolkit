@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.8](https://github.com/liblaf/python-toolkit/compare/v0.0.7...v0.0.8) (2024-11-14)
+
+
+### ✨ Features
+
+* add support for scalar conversion across array libraries ([5dc0057](https://github.com/liblaf/python-toolkit/commit/5dc0057ad51886279bdf814c32f2c9e9aea18e55))
+* introduce lazy loading for ABC module ([133d46a](https://github.com/liblaf/python-toolkit/commit/133d46add64d1988386554038ace106ab7d02625))
+
 ## [0.0.7](https://github.com/liblaf/python-toolkit/compare/v0.0.6...v0.0.7) (2024-11-14)
 
 
