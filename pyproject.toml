@@ -40,7 +40,7 @@ description = "Add your description here"
 name = "liblaf-toolkit"
 readme = "README.md"
 requires-python = ">=3.11"
-version = "0.0.5"
+version = "0.0.6"
 
 [project.optional-dependencies]
 comet = ["comet-ml>=3.47.2"]

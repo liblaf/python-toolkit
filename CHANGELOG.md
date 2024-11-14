@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/liblaf/python-toolkit/compare/v0.0.5...v0.0.6) (2024-11-14)
+
+
+### ♻ Code Refactoring
+
+* reorganize array types and validation modules ([353b241](https://github.com/liblaf/python-toolkit/commit/353b2418b8fd61ea29d1abb19041a8de30c2403f))
+
 ## [0.0.5](https://github.com/liblaf/python-toolkit/compare/v0.0.4...v0.0.5) (2024-11-14)
 
 
