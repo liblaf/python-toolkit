@@ -1,12 +1,4 @@
-from . import (
-    array,
-    environ,
-    exp,
-    logging,
-    serialize,
-    typing,
-    validation,
-)
+from . import abc, array, environ, exp, logging, serialize, typing, validation
 from ._iter import flatten, is_subsequence, merge_mapping
 from ._text import strip_comments
 from .array import as_dict_of_numpy, as_numpy, is_array_like, is_jax, is_numpy, is_torch
@@ -29,6 +21,7 @@ __all__ = [
     "BaseConfig",
     "Experiment",
     "Timer",
+    "abc",
     "array",
     "as_dict_of_numpy",
     "as_numpy",
