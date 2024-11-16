@@ -2,24 +2,24 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-import toolkit as tk
+import toolkit._serialization as _ser
 import toolkit.typing as tp
 
 _READERS: dict[str, Callable[..., Any]] = {
-    ".json": tk.serialize.load_json,
-    ".toml": tk.serialize.load_toml,
-    ".yaml": tk.serialize.load_yaml,
+    ".json": _ser.load_json,
+    ".toml": _ser.load_toml,
+    ".yaml": _ser.load_yaml,
 }
 
 
 _WRITERS: dict[str, Callable[..., None]] = {
-    ".json": tk.serialize.save_json,
-    ".toml": tk.serialize.save_toml,
-    ".yaml": tk.serialize.save_yaml,
+    ".json": _ser.save_json,
+    ".toml": _ser.save_toml,
+    ".yaml": _ser.save_yaml,
 }
 
 
-def load(fpath: tp.StrPath, *, ext: str | None = None) -> Any:
+def serialize(fpath: tp.StrPath, *, ext: str | None = None) -> Any:
     fpath: Path = Path(fpath)
     if ext is None:
         ext = fpath.suffix
@@ -30,7 +30,7 @@ def load(fpath: tp.StrPath, *, ext: str | None = None) -> Any:
     return reader(fpath)
 
 
-def save(fpath: tp.StrPath, data: Any, *, ext: str | None = None) -> None:
+def deserialize(fpath: tp.StrPath, data: Any, *, ext: str | None = None) -> None:
     fpath: Path = Path(fpath)
     if ext is None:
         ext = fpath.suffix

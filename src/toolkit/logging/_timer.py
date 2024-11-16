@@ -71,4 +71,10 @@ class Timer:
         )
 
 
-timer = Timer
+def timer(
+    name: str | None = None,
+    *,
+    depth: int | None = None,
+    level: int | str = "DEBUG",
+) -> Timer:
+    return Timer(name=name, depth=depth, level=level)
