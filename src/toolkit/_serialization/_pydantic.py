@@ -9,11 +9,11 @@ _C = TypeVar("_C", bound=pydantic.BaseModel)
 
 
 def load_pydantic(fpath: tp.StrPath, cls: type[_C], *, ext: str | None = None) -> _C:
-    data: Any = _ser.serialize(fpath, ext=ext)
+    data: Any = _ser.deserialize(fpath, ext=ext)
     return cls.model_validate(data)
 
 
 def save_pydantic(
     fpath: tp.StrPath, data: pydantic.BaseModel, *, ext: str | None = None
 ) -> None:
-    _ser.deserialize(fpath, data.model_dump(), ext=ext)
+    _ser.serialize(fpath, data.model_dump(), ext=ext)
