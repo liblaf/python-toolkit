@@ -36,7 +36,7 @@ def get_url(key: str | None = None) -> str | None:
 
 def auto_commit(exp_name: str | None = None, exp_key: str | None = None) -> None:
     repo: git.Repo = git.Repo(search_parent_directories=True)
-    if not repo.is_dirty():
+    if not repo.is_dirty(untracked_files=True):
         return
     repo.git.add(all=True)
     message: str = "chore(exp): auto commit\n\n"
