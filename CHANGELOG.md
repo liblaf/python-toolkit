@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.11](https://github.com/liblaf/python-toolkit/compare/v0.0.10...v0.0.11) (2024-11-17)
+
+
+### 🐛 Bug Fixes
+
+* correct serialization method calls ([17122f4](https://github.com/liblaf/python-toolkit/commit/17122f46b3cc211df3300ea81ba1194bfe4dca82))
+
+
+### ♻ Code Refactoring
+
+* swap serialization and deserialization logic ([81264f4](https://github.com/liblaf/python-toolkit/commit/81264f4df046c5c92f9ce4d84b2bc6b39519fa83))
+
 ## [0.0.10](https://github.com/liblaf/python-toolkit/compare/v0.0.9...v0.0.10) (2024-11-17)
 
 
