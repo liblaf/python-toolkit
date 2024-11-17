@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.10](https://github.com/liblaf/python-toolkit/compare/v0.0.9...v0.0.10) (2024-11-17)
+
+
+### ♻ Code Refactoring
+
+* replace external validation with internal toolkit validation ([f892bca](https://github.com/liblaf/python-toolkit/commit/f892bca7cf16557a4d1e75611b8372742d55f543))
+* streamline import aliases and improve serialization module ([7a4f444](https://github.com/liblaf/python-toolkit/commit/7a4f444ebb710930f26b188293206567f8aee238))
+
 ## [0.0.9](https://github.com/liblaf/python-toolkit/compare/v0.0.8...v0.0.9) (2024-11-16)
 
 
