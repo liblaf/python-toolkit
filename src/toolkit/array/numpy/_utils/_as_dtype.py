@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from typing import Annotated
 
 import numpy as np
@@ -8,11 +10,11 @@ import toolkit as tk
 import toolkit.validation as tv
 
 
-@pydantic.validate_call
+@tv.validate_call()
 def as_dtype(
-    x: Annotated[np.ndarray, tv.Numpy],
+    x: Annotated[npt.NDArray, tv.Numpy],
     dtype: Annotated[np.dtype, pydantic.BeforeValidator(np.dtype)],
-) -> npt.NDArray[...]:
+) -> npt.NDArray:
     if np.issubdtype(x.dtype, dtype):
         return x
     if np.isdtype(dtype, "bool"):
