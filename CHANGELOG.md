@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.12](https://github.com/liblaf/python-toolkit/compare/v0.0.11...v0.0.12) (2024-12-20)
+
+
+### ⬆️ Dependencies
+
+* **deps:** update astral-sh/setup-uv action to v4 ([#22](https://github.com/liblaf/python-toolkit/issues/22)) ([55247df](https://github.com/liblaf/python-toolkit/commit/55247dfb0ebd43d2c999ebf8f44e80526077b92e))
+* **deps:** update astral-sh/setup-uv action to v5 ([#24](https://github.com/liblaf/python-toolkit/issues/24)) ([543ff0e](https://github.com/liblaf/python-toolkit/commit/543ff0ef0d6576ae45a6ccaea2c444723b712bc3))
+
 ## [0.0.11](https://github.com/liblaf/python-toolkit/compare/v0.0.10...v0.0.11) (2024-11-17)
 
 
